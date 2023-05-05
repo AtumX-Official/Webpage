@@ -15,23 +15,23 @@ const routes: routeType[] = [
     route: "/",
   },
   {
-    name: "milestones",
-    route: "/milestones",
-  },
-  {
-    name: "innovation",
-    route: "/innovation",
+    name: "tale",
+    route: "/tale",
   },
   {
     name: "team",
     route: "/team",
   },
+  {
+    name: "tech",
+    route: "/tech",
+  },
 ];
 
 const Nav: React.FC<props> = ({ currentRoute }) => {
   return (
-    <div className="w-full flex justify-center">
-      <div className="flex flex-col items-center justify-center absolute bottom-8">
+    <div className="fixed bottom-8 w-full flex justify-center">
+      <div className="flex flex-col items-center justify-center">
         <nav className="rounded-full bg-orange-800">
           <ul className="flex">
             {routes.map((item) => (
@@ -47,7 +47,13 @@ const Nav: React.FC<props> = ({ currentRoute }) => {
                     item.route === currentRoute && "bg-orange-600"
                   )}
                 >
-                  {item.name}
+                  {item.name === "home" ? (
+                    <>
+                      <img src="/logo.webp" className="h-6" alt="atumx logo" />
+                    </>
+                  ) : (
+                    item.name
+                  )}
                 </li>
               </a>
             ))}
