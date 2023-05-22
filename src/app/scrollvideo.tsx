@@ -1,3 +1,5 @@
+"use client";
+
 import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 
@@ -11,14 +13,27 @@ const ScrollVideo: React.FC<props> = ({ dir, max }) => {
   const h = useRef<number>();
 
   const [scrollValue, setScrollValue] = useState(0);
-  const [frameValue, setFrameValue] = useState(1);
+  const [frameNumber, setFrameNumber] = useState(1);
+
+  useEffect(() => {
+    w.current = window.innerWidth;
+    h.current = window.innerHeight;
+  }, []);
 
   useEffect(() => {
     const onScroll = (e: any) => {
-      setScrollValue(e.target.documentElement.scrollTop);
-      setFrameValue(Math.round((max / 100) * (scrollValue / 5000) * 100) + 1);
+      if (h.current) {
+        setScrollValue(e.target.documentElement.scrollTop);
+        setFrameNumber(
+          Math.round(
+            max *
+              ((scrollValue + h.current) /
+                e.target.documentElement.scrollHeight)
+          )
+        );
+      }
       console.log("px: " + scrollValue);
-      console.log("frame: " + frameValue);
+      console.log("frame: " + frameNumber);
     };
 
     window.addEventListener("scroll", onScroll);
@@ -34,8 +49,8 @@ const ScrollVideo: React.FC<props> = ({ dir, max }) => {
         className="w-full h-full fixed top-0"
         width={1000}
         height={1000}
-        src={dir + "/image" + frameValue + ".jpg"}
-        alt=""
+        src={dir + "/image" + frameNumber + ".jpg"}
+        alt="current frame in the video"
       />
     </div>
   );
