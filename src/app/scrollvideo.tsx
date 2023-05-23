@@ -9,14 +9,14 @@ interface props {
 }
 
 const ScrollVideo: React.FC<props> = ({ dir, max }) => {
-  const w = useRef<number>();
+  const loaded: boolean[] = [];
+
   const h = useRef<number>();
 
   const [scrollValue, setScrollValue] = useState(0);
   const [frameNumber, setFrameNumber] = useState(1);
 
   useEffect(() => {
-    w.current = window.innerWidth;
     h.current = window.innerHeight;
   }, []);
 
@@ -32,16 +32,14 @@ const ScrollVideo: React.FC<props> = ({ dir, max }) => {
           )
         );
       }
-      console.log("px: " + scrollValue);
-      console.log("frame: " + frameNumber);
+      // console.log("px: " + scrollValue);
+      // console.log("frame: " + frameNumber);
     };
 
     window.addEventListener("scroll", onScroll);
 
     return () => window.removeEventListener("scroll", onScroll);
   }, [scrollValue]);
-
-  useEffect(() => {}, []);
 
   return (
     <div className="min-h-[5000px]">
@@ -51,6 +49,7 @@ const ScrollVideo: React.FC<props> = ({ dir, max }) => {
         height={1000}
         src={dir + "/image" + frameNumber + ".jpg"}
         alt="current frame in the video"
+        priority
       />
     </div>
   );
