@@ -23,8 +23,8 @@ const routes: routeType[] = [
     route: "/careers",
   },
   {
-    name: "Workshops",
-    route: "/workshop",
+    name: "Updates",
+    route: "/updates",
   },
 ];
 
@@ -47,17 +47,17 @@ const Menu: React.FC<props> = ({ currentRoute }) => {
       </button>
       <div className="transition ease-in-out delay-150 flex flex-col gap-3 items-end translate-x-32 group-hover:translate-x-0">
         {routes.map((route) => (
-          <button
+          <a
+            href={route.route}
             key={route.name}
             className={clsx(
-              "bg-orange-600 px-3 py-1 rounded-full text-sm w-fit hover:bg-orange-400",
-              route.route === currentRoute && "bg-orange-500"
+              "px-3 py-1 rounded-full text-sm w-fit hover:bg-orange-400",
+              route.route === currentRoute && "bg-orange-500",
+              route.route !== currentRoute && "bg-orange-600"
             )}
-            // className={
-            // }
           >
             {route.name}
-          </button>
+          </a>
         ))}
       </div>
     </div>

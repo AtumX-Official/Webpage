@@ -1,7 +1,7 @@
-import "./globals.css";
+import "../globals.css";
 
 export const metadata = {
-  title: "AtumX | Home",
+  title: "AtumX | About Us",
   description:
     "Building next-gen social robots with vision based autonomous system and in-house crafted 5 sense AI engine.",
 };

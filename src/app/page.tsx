@@ -34,7 +34,7 @@ export default function Home() {
       </Head>
       <main>
         <ScrollVideo dir="/desktop" max={25} />
-        <OverLay />
+        <OverLay currentRoute="/" />
       </main>
     </>
   );
