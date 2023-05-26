@@ -4,8 +4,6 @@ import OverLay from "../overlay";
 
 export default async function Page() {
   const updatePosts = await getPosts();
-  // const posts = updatePosts.data.allPosts;
-  // console.log(posts[0].date.split("-")[1]); // yyyy-mm-dd
 
   const posts = updatePosts.data.allPosts.sort(
     (a, b) => parseInt(a.date.split("-")[1]) - parseInt(b.date.split("-")[1])
@@ -15,7 +13,7 @@ export default async function Page() {
     <>
       <main className="bg-white text-black w-full h-full flex flex-col justify-center items-center pt-24 pb-12 px-10">
         <OverLay currentRoute="/updates" />
-        <div className="font-monst">
+        <div className="font-monst md:my-10">
           <h1 className="text-5xl font-bold">BIG THINGS HAVE BEEN HAPPENING</h1>
           <p>DO CHECK US OUT</p>
         </div>

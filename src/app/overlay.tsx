@@ -9,13 +9,15 @@ const OverLay: React.FC<props> = ({ currentRoute }) => {
   return (
     <div className="w-full text-white h-full fixed top-0 flex flex-col justify-between p-6">
       <div className="flex flex-row justify-between">
-        <Image
-          className="bg-orange-600 h-fit px-3 py-2 rounded-full"
-          src={"/logo.webp"}
-          height={36}
-          width={100}
-          alt="logo"
-        />
+        <a href="/">
+          <Image
+            className="bg-orange-600 h-fit px-3 py-2 rounded-full"
+            src={"/logo.webp"}
+            height={36}
+            width={100}
+            alt="logo"
+          />
+        </a>
         <Menu currentRoute={currentRoute} />
       </div>
       <div className="flex flex-row justify-around items-center">
@@ -31,9 +33,13 @@ const OverLay: React.FC<props> = ({ currentRoute }) => {
             <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
           </svg>
         </a>
-        <button className="bg-orange-600 px-6 py-2 rounded-full text-xs md:text-base w-fit self-center font-semibold hover:bg-orange-400">
+        <a
+          href="https://forms.gle/BF9YK8qR1to8FH6F8"
+          target="_blank"
+          className="bg-orange-600 px-6 py-2 rounded-full text-xs md:text-base w-fit self-center font-semibold hover:bg-orange-400"
+        >
           REGISTER YOUR INTEREST
-        </button>
+        </a>
         <a href="https://www.instagram.com/atumxofficial/" className="h-full">
           <svg
             className="fill-orange-600 h-full bg-white rounded-lg hover:fill-orange-400"
