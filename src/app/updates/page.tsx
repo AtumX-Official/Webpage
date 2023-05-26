@@ -24,7 +24,7 @@ export default async function Page() {
           {posts.map((post) => {
             return (
               <div
-                className="z-10 shadow-md rounded-lg p-4 flex flex-col hover:shadow-xl"
+                className="z-0 shadow-md rounded-lg p-4 flex flex-col hover:shadow-xl"
                 key={post.id}
               >
                 <h2 className="text-xl">{post.title}</h2>
