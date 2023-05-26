@@ -4,7 +4,7 @@ import Image from "next/image";
 export default function Home() {
   return (
     <>
-      <main className="bg-orange-400 w-full h-full flex flex-col justify-center items-center pt-24 pb-12">
+      <main className="bg-white text-black md:text-lg w-full h-full flex flex-col justify-center items-center pt-24 pb-12">
         <h1 className="text-8xl">Hi! 👋</h1>
         <h2 className="text-justify m-9">
           we at AtumX, are a dynamic and youthful team of highly passionate

@@ -4,7 +4,12 @@ import OverLay from "../overlay";
 
 export default async function Page() {
   const updatePosts = await getPosts();
-  const posts = updatePosts.data.allPosts;
+  // const posts = updatePosts.data.allPosts;
+  // console.log(posts[0].date.split("-")[1]); // yyyy-mm-dd
+
+  const posts = updatePosts.data.allPosts.sort(
+    (a, b) => parseInt(a.date.split("-")[1]) - parseInt(b.date.split("-")[1])
+  );
 
   return (
     <>
@@ -19,7 +24,7 @@ export default async function Page() {
           {posts.map((post) => {
             return (
               <div
-                className="shadow-lg rounded-lg p-4 flex flex-col"
+                className="z-10 shadow-md rounded-lg p-4 flex flex-col hover:shadow-xl"
                 key={post.id}
               >
                 <h2 className="text-xl">{post.title}</h2>
