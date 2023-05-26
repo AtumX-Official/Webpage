@@ -7,7 +7,7 @@ interface props {
 
 const OverLay: React.FC<props> = ({ currentRoute }) => {
   return (
-    <div className="w-full h-full fixed top-0 flex flex-col justify-between p-6">
+    <div className="w-full text-white h-full fixed top-0 flex flex-col justify-between p-6">
       <div className="flex flex-row justify-between">
         <Image
           className="bg-orange-600 h-fit px-3 py-2 rounded-full"
