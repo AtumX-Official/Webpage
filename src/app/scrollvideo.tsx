@@ -32,8 +32,8 @@ const ScrollVideo: React.FC<props> = ({ dir, max }) => {
           )
         );
       }
-      // console.log("px: " + scrollValue);
-      // console.log("frame: " + frameNumber);
+      console.log("px: " + scrollValue);
+      console.log("frame: " + frameNumber);
     };
 
     window.addEventListener("scroll", onScroll);
@@ -42,7 +42,7 @@ const ScrollVideo: React.FC<props> = ({ dir, max }) => {
   }, [scrollValue]);
 
   return (
-    <div className="min-h-[5000px]">
+    <div className="min-h-[7000px]">
       <Image
         className="w-full h-full fixed top-0"
         width={1000}
