@@ -29,3 +29,15 @@ export const getPosts = () => {
         }
       }`);
 };
+
+export const getJobs = () => {
+  return fetchCms<Jobs>(`
+    query getJobs {
+        allJobs{
+            title
+            location
+            skills
+          }
+    }
+    `);
+};

@@ -15,12 +15,12 @@ export default async function Page() {
     <>
       <main className="bg-white text-black w-full h-full flex flex-col justify-center items-center pt-24 pb-12 px-10">
         <OverLay currentRoute="/updates" />
-        <div className="self-start m-2">
-          <h1 className="text-3xl font-bold">Updates</h1>
-          <p>Cool things that we&apos;ve done</p>
+        <div className="font-monst">
+          <h1 className="text-5xl font-bold">BIG THINGS HAVE BEEN HAPPENING</h1>
+          <p>DO CHECK US OUT</p>
         </div>
         <hr />
-        <div className="flex flex-col gap-2 m-3 md:w-full">
+        <div className="flex flex-col gap-2 m-3 w-full">
           {posts.map((post) => {
             return (
               <div
@@ -30,7 +30,7 @@ export default async function Page() {
                 <h2 className="text-xl">{post.title}</h2>
                 <p className="opacity-75">{post.content}</p>
                 <Image
-                  className="self-end"
+                  className="self-end m-2"
                   src={post.image.url}
                   alt={post.id}
                   width={100}

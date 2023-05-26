@@ -30,7 +30,7 @@ const routes: routeType[] = [
 
 const Menu: React.FC<props> = ({ currentRoute }) => {
   return (
-    <div className="flex flex-col gap-5 items-end group">
+    <div className="flex flex-col gap-5 items-end z-20 group">
       <button>
         <div className="bg-white w-6 h-6 absolute top-9 right-9"></div>
         <svg
