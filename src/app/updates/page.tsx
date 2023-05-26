@@ -28,7 +28,7 @@ export default async function Page() {
                 key={post.id}
               >
                 <h2 className="text-xl">{post.title}</h2>
-                {post.content}
+                <p className="opacity-75">{post.content}</p>
                 <Image
                   className="self-end"
                   src={post.image.url}
