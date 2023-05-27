@@ -5,6 +5,7 @@ import axios from "axios";
 
 const Form: React.FC = () => {
   const [email, setEmail] = useState("");
+  const [status, setStatus] = useState<"NONE" | "SUCCESS" | "FAILED">("NONE");
 
   return (
     <form
@@ -18,11 +19,13 @@ const Form: React.FC = () => {
             email,
           })
           .then(function (response) {
-            console.log(response);
+            console.log(response.data.status);
+            setStatus(response.data.status);
           })
           .catch(function (error) {
             console.log(error);
           });
+        setEmail("");
       }}
     >
       <input
