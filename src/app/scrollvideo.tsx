@@ -2,6 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
+import Loading from "./loading";
 
 interface props {
   dir: string;
@@ -9,16 +10,30 @@ interface props {
 }
 
 const ScrollVideo: React.FC<props> = ({ dir, max }) => {
-  const loaded: boolean[] = [];
-
   const h = useRef<number>();
   const w = useRef<number>();
 
   const [scrollValue, setScrollValue] = useState(0);
   const [frameNumber, setFrameNumber] = useState(1);
+  const [loaded, setLoaded] = useState(false);
   const [orientation, setOrientation] = useState<"mobile" | "desktop">(
     "mobile"
   );
+
+  useEffect(() => {
+    const onPageLoad = () => {
+      setLoaded(true);
+    };
+
+    // Check if the page has already loaded
+    if (document.readyState === "complete") {
+      onPageLoad();
+    } else {
+      window.addEventListener("load", onPageLoad);
+      // Remove the event listener when component unmounts
+      return () => window.removeEventListener("load", onPageLoad);
+    }
+  }, []);
 
   useEffect(() => {
     h.current = window.innerHeight;
@@ -27,10 +42,6 @@ const ScrollVideo: React.FC<props> = ({ dir, max }) => {
       ? setOrientation("mobile")
       : setOrientation("desktop");
   }, []);
-
-  useEffect(() => {
-    console.log(orientation);
-  }, [orientation]);
 
   useEffect(() => {
     const onScroll = (e: any) => {
@@ -55,6 +66,7 @@ const ScrollVideo: React.FC<props> = ({ dir, max }) => {
 
   return (
     <>
+      {!loaded && <Loading />}
       <div className="min-h-[7000px]">
         <Image
           className="w-full h-full fixed top-0"

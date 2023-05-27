@@ -2,6 +2,7 @@ import ScrollVideo from "@/app/scrollvideo";
 import OverLay from "./overlay";
 import Head from "next/head";
 import PreFetch from "./prefetch";
+import { useEffect } from "react";
 
 export default function Home() {
   return (
