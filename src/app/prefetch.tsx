@@ -1,0 +1,135 @@
+interface props {
+  path: string;
+}
+
+const PreFetch: React.FC<props> = ({ path }) => {
+  return (
+    <>
+      <link rel="preload" href={path + "/image1.jpg"} as="image" />
+      <link rel="preload" href={path + "/image2.jpg"} as="image" />
+      <link rel="preload" href={path + "/image3.jpg"} as="image" />
+      <link rel="preload" href={path + "/image4.jpg"} as="image" />
+      <link rel="preload" href={path + "/image5.jpg"} as="image" />
+      <link rel="preload" href={path + "/image6.jpg"} as="image" />
+      <link rel="preload" href={path + "/image7.jpg"} as="image" />
+      <link rel="preload" href={path + "/image8.jpg"} as="image" />
+      <link rel="preload" href={path + "/image9.jpg"} as="image" />
+      <link rel="preload" href={path + "/image10.jpg"} as="image" />
+      <link rel="preload" href={path + "/image11.jpg"} as="image" />
+      <link rel="preload" href={path + "/image12.jpg"} as="image" />
+      <link rel="preload" href={path + "/image13.jpg"} as="image" />
+      <link rel="preload" href={path + "/image14.jpg"} as="image" />
+      <link rel="preload" href={path + "/image15.jpg"} as="image" />
+      <link rel="preload" href={path + "/image16.jpg"} as="image" />
+      <link rel="preload" href={path + "/image17.jpg"} as="image" />
+      <link rel="preload" href={path + "/image18.jpg"} as="image" />
+      <link rel="preload" href={path + "/image19.jpg"} as="image" />
+      <link rel="preload" href={path + "/image20.jpg"} as="image" />
+      <link rel="preload" href={path + "/image21.jpg"} as="image" />
+      <link rel="preload" href={path + "/image22.jpg"} as="image" />
+      <link rel="preload" href={path + "/image23.jpg"} as="image" />
+      <link rel="preload" href={path + "/image24.jpg"} as="image" />
+      <link rel="preload" href={path + "/image25.jpg"} as="image" />
+      <link rel="preload" href={path + "/image26.jpg"} as="image" />
+      <link rel="preload" href={path + "/image27.jpg"} as="image" />
+      <link rel="preload" href={path + "/image28.jpg"} as="image" />
+      <link rel="preload" href={path + "/image29.jpg"} as="image" />
+      <link rel="preload" href={path + "/image30.jpg"} as="image" />
+      <link rel="preload" href={path + "/image31.jpg"} as="image" />
+      <link rel="preload" href={path + "/image32.jpg"} as="image" />
+      <link rel="preload" href={path + "/image33.jpg"} as="image" />
+      <link rel="preload" href={path + "/image34.jpg"} as="image" />
+      <link rel="preload" href={path + "/image35.jpg"} as="image" />
+      <link rel="preload" href={path + "/image36.jpg"} as="image" />
+      <link rel="preload" href={path + "/image37.jpg"} as="image" />
+      <link rel="preload" href={path + "/image38.jpg"} as="image" />
+      <link rel="preload" href={path + "/image39.jpg"} as="image" />
+      <link rel="preload" href={path + "/image40.jpg"} as="image" />
+      <link rel="preload" href={path + "/image41.jpg"} as="image" />
+      <link rel="preload" href={path + "/image42.jpg"} as="image" />
+      <link rel="preload" href={path + "/image43.jpg"} as="image" />
+      <link rel="preload" href={path + "/image44.jpg"} as="image" />
+      <link rel="preload" href={path + "/image45.jpg"} as="image" />
+      <link rel="preload" href={path + "/image46.jpg"} as="image" />
+      <link rel="preload" href={path + "/image47.jpg"} as="image" />
+      <link rel="preload" href={path + "/image48.jpg"} as="image" />
+      <link rel="preload" href={path + "/image49.jpg"} as="image" />
+      <link rel="preload" href={path + "/image50.jpg"} as="image" />
+      <link rel="preload" href={path + "/image51.jpg"} as="image" />
+      <link rel="preload" href={path + "/image52.jpg"} as="image" />
+      <link rel="preload" href={path + "/image53.jpg"} as="image" />
+      <link rel="preload" href={path + "/image54.jpg"} as="image" />
+      <link rel="preload" href={path + "/image55.jpg"} as="image" />
+      <link rel="preload" href={path + "/image56.jpg"} as="image" />
+      <link rel="preload" href={path + "/image57.jpg"} as="image" />
+      <link rel="preload" href={path + "/image58.jpg"} as="image" />
+      <link rel="preload" href={path + "/image59.jpg"} as="image" />
+      <link rel="preload" href={path + "/image60.jpg"} as="image" />
+      <link rel="preload" href={path + "/image61.jpg"} as="image" />
+      <link rel="preload" href={path + "/image62.jpg"} as="image" />
+      <link rel="preload" href={path + "/image63.jpg"} as="image" />
+      <link rel="preload" href={path + "/image64.jpg"} as="image" />
+      <link rel="preload" href={path + "/image65.jpg"} as="image" />
+      <link rel="preload" href={path + "/image66.jpg"} as="image" />
+      <link rel="preload" href={path + "/image67.jpg"} as="image" />
+      <link rel="preload" href={path + "/image68.jpg"} as="image" />
+      <link rel="preload" href={path + "/image69.jpg"} as="image" />
+      <link rel="preload" href={path + "/image70.jpg"} as="image" />
+      <link rel="preload" href={path + "/image71.jpg"} as="image" />
+      <link rel="preload" href={path + "/image72.jpg"} as="image" />
+      <link rel="preload" href={path + "/image73.jpg"} as="image" />
+      <link rel="preload" href={path + "/image74.jpg"} as="image" />
+      <link rel="preload" href={path + "/image75.jpg"} as="image" />
+      <link rel="preload" href={path + "/image76.jpg"} as="image" />
+      <link rel="preload" href={path + "/image77.jpg"} as="image" />
+      <link rel="preload" href={path + "/image78.jpg"} as="image" />
+      <link rel="preload" href={path + "/image79.jpg"} as="image" />
+      <link rel="preload" href={path + "/image80.jpg"} as="image" />
+      <link rel="preload" href={path + "/image81.jpg"} as="image" />
+      <link rel="preload" href={path + "/image82.jpg"} as="image" />
+      <link rel="preload" href={path + "/image83.jpg"} as="image" />
+      <link rel="preload" href={path + "/image84.jpg"} as="image" />
+      <link rel="preload" href={path + "/image85.jpg"} as="image" />
+      <link rel="preload" href={path + "/image86.jpg"} as="image" />
+      <link rel="preload" href={path + "/image87.jpg"} as="image" />
+      <link rel="preload" href={path + "/image88.jpg"} as="image" />
+      <link rel="preload" href={path + "/image89.jpg"} as="image" />
+      <link rel="preload" href={path + "/image90.jpg"} as="image" />
+      <link rel="preload" href={path + "/image91.jpg"} as="image" />
+      <link rel="preload" href={path + "/image92.jpg"} as="image" />
+      <link rel="preload" href={path + "/image93.jpg"} as="image" />
+      <link rel="preload" href={path + "/image94.jpg"} as="image" />
+      <link rel="preload" href={path + "/image95.jpg"} as="image" />
+      <link rel="preload" href={path + "/image96.jpg"} as="image" />
+      <link rel="preload" href={path + "/image97.jpg"} as="image" />
+      <link rel="preload" href={path + "/image98.jpg"} as="image" />
+      <link rel="preload" href={path + "/image99.jpg"} as="image" />
+      <link rel="preload" href={path + "/image100.jpg"} as="image" />
+      <link rel="preload" href={path + "/image101.jpg"} as="image" />
+      <link rel="preload" href={path + "/image102.jpg"} as="image" />
+      <link rel="preload" href={path + "/image103.jpg"} as="image" />
+      <link rel="preload" href={path + "/image104.jpg"} as="image" />
+      <link rel="preload" href={path + "/image105.jpg"} as="image" />
+      <link rel="preload" href={path + "/image106.jpg"} as="image" />
+      <link rel="preload" href={path + "/image107.jpg"} as="image" />
+      <link rel="preload" href={path + "/image108.jpg"} as="image" />
+      <link rel="preload" href={path + "/image109.jpg"} as="image" />
+      <link rel="preload" href={path + "/image110.jpg"} as="image" />
+      <link rel="preload" href={path + "/image111.jpg"} as="image" />
+      <link rel="preload" href={path + "/image112.jpg"} as="image" />
+      <link rel="preload" href={path + "/image113.jpg"} as="image" />
+      <link rel="preload" href={path + "/image114.jpg"} as="image" />
+      <link rel="preload" href={path + "/image115.jpg"} as="image" />
+      <link rel="preload" href={path + "/image116.jpg"} as="image" />
+      <link rel="preload" href={path + "/image117.jpg"} as="image" />
+      <link rel="preload" href={path + "/image118.jpg"} as="image" />
+      <link rel="preload" href={path + "/image119.jpg"} as="image" />
+      <link rel="preload" href={path + "/image120.jpg"} as="image" />
+      <link rel="preload" href={path + "/image121.jpg"} as="image" />
+      <link rel="preload" href={path + "/image122.jpg"} as="image" />
+      <link rel="preload" href={path + "/image123.jpg"} as="image" />
+    </>
+  );
+};
+
+export default PreFetch;

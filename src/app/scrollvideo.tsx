@@ -12,13 +12,25 @@ const ScrollVideo: React.FC<props> = ({ dir, max }) => {
   const loaded: boolean[] = [];
 
   const h = useRef<number>();
+  const w = useRef<number>();
 
   const [scrollValue, setScrollValue] = useState(0);
   const [frameNumber, setFrameNumber] = useState(1);
+  const [orientation, setOrientation] = useState<"mobile" | "desktop">(
+    "mobile"
+  );
 
   useEffect(() => {
     h.current = window.innerHeight;
+    w.current = window.innerWidth;
+    h.current > w.current
+      ? setOrientation("mobile")
+      : setOrientation("desktop");
   }, []);
+
+  useEffect(() => {
+    console.log(orientation);
+  }, [orientation]);
 
   useEffect(() => {
     const onScroll = (e: any) => {
@@ -32,7 +44,7 @@ const ScrollVideo: React.FC<props> = ({ dir, max }) => {
           )
         );
       }
-      console.log("px: " + scrollValue);
+      // console.log("px: " + scrollValue);
       console.log("frame: " + frameNumber);
     };
 
@@ -42,16 +54,18 @@ const ScrollVideo: React.FC<props> = ({ dir, max }) => {
   }, [scrollValue]);
 
   return (
-    <div className="min-h-[7000px]">
-      <Image
-        className="w-full h-full fixed top-0"
-        width={1000}
-        height={1000}
-        src={dir + "/image" + frameNumber + ".jpg"}
-        alt="current frame in the video"
-        priority
-      />
-    </div>
+    <>
+      <div className="min-h-[7000px]">
+        <Image
+          className="w-full h-full fixed top-0"
+          width={1000}
+          height={1000}
+          src={dir + "/" + orientation + "/image" + frameNumber + ".jpg"}
+          alt="current frame in the video"
+          priority
+        />
+      </div>
+    </>
   );
 };
 
