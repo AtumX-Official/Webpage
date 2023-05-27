@@ -34,8 +34,7 @@ const OverLay: React.FC<props> = ({ currentRoute }) => {
           </svg>
         </a>
         <a
-          href="https://forms.gle/BF9YK8qR1to8FH6F8"
-          target="_blank"
+          href="/subscribe"
           className="bg-orange-600 px-6 py-2 rounded-full text-xs md:text-base w-fit self-center font-semibold hover:bg-orange-400"
         >
           REGISTER YOUR INTEREST
