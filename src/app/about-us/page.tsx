@@ -1,3 +1,4 @@
+import Hero from "../hero";
 import OverLay from "../overlay";
 import Image from "next/image";
 
@@ -5,10 +6,7 @@ export default function Home() {
   return (
     <>
       <main className="bg-white text-black md:text-lg w-full h-full flex flex-col justify-center items-center pt-24 pb-12 px-10">
-        <div className="font-monst md:my-10">
-          <h1 className="text-5xl font-bold">WE BUILD SOCIAL ROBOTS</h1>
-          <p>HIEEEEEEE! 👋</p>
-        </div>
+        <Hero h1="WE BUILD SOCIAL ROBOTS" p="HIEEEEEEE! 👋" />
         <br />
         <h2 className="text-justify">
           we at AtumX, are a dynamic and youthful team of highly passionate
