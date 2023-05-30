@@ -21,7 +21,7 @@ const ScrollVideo: React.FC<props> = ({ dir, max }) => {
   );
 
   useEffect(() => {
-    const onPageLoad = () => {
+    const onPageLoad = async () => {
       setLoaded(true);
     };
 
@@ -66,8 +66,20 @@ const ScrollVideo: React.FC<props> = ({ dir, max }) => {
 
   return (
     <>
-      {!loaded && <Loading />}
-      <div className="min-h-[7000px]">
+      <Loading display={!loaded} prefetchDir={"/" + dir + orientation} />
+      <div>
+        <div className="fixed bottom-20 z-20 w-full flex flex-col justify-center items-center ">
+          <svg
+            className="fill-orange-600 animate-bounce"
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+          >
+            <path d="M12 2c3.309 0 6 2.691 6 6v8c0 3.309-2.691 6-6 6s-6-2.691-6-6v-8c0-3.309 2.691-6 6-6zm0-2c-4.418 0-8 3.582-8 8v8c0 4.418 3.582 8 8 8s8-3.582 8-8v-8c0-4.418-3.582-8-8-8zm0 9c-.829 0-1.5-.672-1.5-1.5s.671-1.5 1.5-1.5 1.5.672 1.5 1.5-.671 1.5-1.5 1.5z" />
+          </svg>
+          <p className="text-orange-600">scroll down</p>
+        </div>
         <Image
           className="w-full h-full fixed top-0"
           width={1000}
