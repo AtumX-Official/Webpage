@@ -17,7 +17,7 @@ const PreFetch: React.FC<props> = ({ path, frames }) => {
         alt="invisible image"
         className="invisible"
         loading="eager"
-        src={path + "/image" + i + ".jpg"}
+        src={path + "/image" + i + 1 + ".jpg"}
       />
     );
   }
