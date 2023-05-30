@@ -3,8 +3,9 @@ import PreFetch from "./prefetch";
 interface props {
   prefetchDir: string;
   display: boolean;
+  frames: number;
 }
-const Loading: React.FC<props> = ({ prefetchDir, display }) => {
+const Loading: React.FC<props> = ({ prefetchDir, display, frames }) => {
   return (
     <>
       <div
@@ -17,7 +18,7 @@ const Loading: React.FC<props> = ({ prefetchDir, display }) => {
         <br />
         <h1 className="z-30 text-white font-mono text-center">loading...</h1>
       </div>
-      <PreFetch path={prefetchDir} />
+      <PreFetch path={prefetchDir} frames={frames} />
     </>
   );
 };

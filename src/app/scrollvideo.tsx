@@ -51,7 +51,6 @@ const ScrollVideo: React.FC<props> = ({ dir, max }) => {
           max * (scrollValue / e.target.documentElement.scrollHeight)
         ) + 1
       );
-      // console.log("px: " + scrollValue);
       console.log("frame: " + frameNumber);
     };
 
@@ -62,7 +61,11 @@ const ScrollVideo: React.FC<props> = ({ dir, max }) => {
 
   return (
     <>
-      <Loading display={!loaded} prefetchDir={"/" + dir + orientation} />
+      <Loading
+        display={!loaded}
+        prefetchDir={"/" + dir + orientation}
+        frames={max}
+      />
       <div>
         <div className="fixed bottom-20 z-20 w-full flex flex-col justify-center items-center ">
           <svg
