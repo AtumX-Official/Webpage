@@ -10,7 +10,7 @@ export default async function Page() {
   return (
     <>
       <main className="bg-white font-monst text-black w-full h-full flex flex-col justify-center items-center pt-24 pb-12 px-10">
-        <OverLay currentRoute="/careers" />
+        <OverLay currentRoute="/team" />
         <div className="font-monst md:my-10">
           <div className="text-7xl md:text-9xl font-bold">
             <h1>WE</h1>
