@@ -11,12 +11,13 @@ export default async function Page() {
     <>
       <main className="bg-white text-black w-full h-full flex flex-col justify-center items-center pt-24 pb-12 px-10">
         <OverLay currentRoute="/careers" />
-        <div className="font-monst md:my-10">
+        <div className="font-monst md:my-10 md:text-center">
           <h1 className="text-5xl font-bold">WE MAKE BIG IDEAS HAPPEN</h1>
           <p>JOIN US FOR THE RIDE</p>
         </div>
+        <br />
         <hr />
-        <div className="flex flex-col gap-2 m-3 w-full">
+        <div className="flex flex-col gap-7 m-3 w-full md:grid md:grid-cols-3">
           {jobs.map((job) => {
             return (
               <div
