@@ -5,7 +5,7 @@ export default function Home() {
     <>
       <main className="bg-white font-monst text-black md:text-lg w-full h-full flex flex-col justify-center items-center pt-24 pb-12 px-10">
         <div className="font-monst md:my-10">
-          <div className="text-7xl md:text-5xl font-bold">
+          <div className="text-7xl md:text-9xl font-bold">
             <h1>WE</h1>
             <h1>BUILD</h1>
             <h1>SOCIAL</h1>

@@ -9,32 +9,38 @@ const Form: React.FC = () => {
 
   return (
     <form
-      className="z-30"
+      className="z-50 font-monst w-full flex justify-center"
       onSubmit={async (e) => {
         e.preventDefault();
         axios
           .post("/subscribe/api", {
-            firstName: "Fred",
-            lastName: "Flintstone",
+            firstName: "",
+            lastName: "",
             email,
           })
           .then(function (response) {
-            console.log(response.data.status);
-            setStatus(response.data.status);
+            console.log(response.data);
+            setStatus("SUCCESS");
           })
           .catch(function (error) {
             console.log(error);
+            setStatus("FAILED");
           });
-        setEmail("");
+        setEmail("signing you up for our newletter");
       }}
     >
-      <input
-        className="mx-10 bg-transparent w-full self-center border-2 border-white focus:outline-none  focus:shadow-orange-600 focus:shadow-md rounded-full px-6 py-2 text-white placeholder-white"
-        type="email"
-        value={email}
-        onChange={(e) => setEmail(e.target.value)}
-        placeholder="info@atumx.in"
-      />
+      {status === "NONE" && (
+        <input
+          className="bg-transparent w-3/4 min-w-[300px] self-center border-2 border-white focus:outline-none  focus:shadow-orange-600 focus:shadow-md rounded-full px-6 py-2 text-white placeholder-white"
+          type="email"
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+          placeholder="contact us: info@atumx.in"
+        />
+      )}
+      {status === "SUCCESS" && (
+        <h1 className="text-9xl text-orange-600 font-mono">THANK YOU</h1>
+      )}
     </form>
   );
 };

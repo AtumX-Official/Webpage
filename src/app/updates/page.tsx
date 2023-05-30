@@ -13,13 +13,14 @@ export default async function Page() {
     <>
       <main className="bg-white text-black font-mono w-full h-full flex flex-col justify-center items-center pt-24 pb-12 px-10">
         <OverLay currentRoute="/updates" />
-        <div className="font-monst md:my-10 md:text-center">
-          <div className="text-5xl font-bold">
+        <div className="font-monst md:my-10">
+          <div className="text-5xl md:text-9xl font-bold">
             <h1>BIG THINGS</h1>
-            <h1>HAVE BEEN</h1>
+            <h1>HAVE</h1>
+            <h1>BEEN</h1>
             <h1>HAPPENING</h1>
           </div>
-          <p>DO CHECK US OUT</p>
+          <p className="text-center">DO CHECK US OUT</p>
         </div>
         <br />
         <hr />

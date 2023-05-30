@@ -19,8 +19,8 @@ const routes: routeType[] = [
     route: "/about-us",
   },
   {
-    name: "Careers",
-    route: "/careers",
+    name: "Team",
+    route: "/team",
   },
   {
     name: "Updates",
