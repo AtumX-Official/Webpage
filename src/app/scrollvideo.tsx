@@ -45,16 +45,12 @@ const ScrollVideo: React.FC<props> = ({ dir, max }) => {
 
   useEffect(() => {
     const onScroll = (e: any) => {
-      if (h.current) {
-        setScrollValue(e.target.documentElement.scrollTop);
-        setFrameNumber(
-          Math.round(
-            max *
-              ((scrollValue + h.current) /
-                e.target.documentElement.scrollHeight)
-          )
-        );
-      }
+      setScrollValue(e.target.documentElement.scrollTop);
+      setFrameNumber(
+        Math.round(
+          max * (scrollValue / e.target.documentElement.scrollHeight)
+        ) + 1
+      );
       // console.log("px: " + scrollValue);
       console.log("frame: " + frameNumber);
     };

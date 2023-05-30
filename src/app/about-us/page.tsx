@@ -8,7 +8,7 @@ export default function Home() {
           <h1 className="text-7xl md:text-5xl font-bold">
             WE BUILD SOCIAL ROBOTS
           </h1>
-          <p className="md:text-center text-[0.68rem] text-base">
+          <p className="md:text-center text-[0.68rem] md:text-base">
             CUZ WELL THAT&apos;S HOW ROBOTS WE&apos;RE SUPPOSED TO BE
           </p>
         </div>
@@ -24,10 +24,10 @@ export default function Home() {
             {"{insert video compilation of kids in workshop using heka}"}
           </p>
           <br />
-          <p className="text-[0.6rem]">
+          <p className="text-[0.65rem] md:text-base">
             1000+ PARENTS HAPPY THIER CHILD ISN&apos;T PHONE ADDICTED
           </p>
-          <p className="text-[0.6rem]">
+          <p className="text-[0.625rem] md:text-base">
             100+ PARENTS HAPPY THIER CHILD UNDERSTANDS ROBOTICS
           </p>
         </div>
