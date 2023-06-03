@@ -41,6 +41,11 @@ const ScrollVideo: React.FC<props> = ({ dir, max }) => {
     h.current > w.current
       ? setOrientation("mobile")
       : setOrientation("desktop");
+
+    window.addEventListener("resize", (e: any) => {
+      h.current = e.currentTarget.innerHeight;
+      w.current = e.currentTarget.innerWidth;
+    });
   }, []);
 
   useEffect(() => {
@@ -81,6 +86,7 @@ const ScrollVideo: React.FC<props> = ({ dir, max }) => {
         </div>
         <Image
           className="w-full h-full fixed top-0"
+          style={{ width: w.current, height: h.current }}
           width={1000}
           height={1000}
           src={dir + "/" + orientation + "/image" + frameNumber + ".jpg"}

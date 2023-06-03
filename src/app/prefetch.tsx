@@ -15,7 +15,7 @@ const PreFetch: React.FC<props> = ({ path, frames }) => {
         height={1000}
         width={1000}
         alt="invisible image"
-        className="w-full h-[100px]"
+        className="invisible w-full h-[100px]"
         loading="eager"
         src={path + "/image" + i + ".jpg"}
       />
