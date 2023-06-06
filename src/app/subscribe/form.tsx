@@ -39,7 +39,9 @@ const Form: React.FC = () => {
         />
       )}
       {status === "SUCCESS" && (
-        <h1 className="text-9xl text-orange-600 font-mono">THANK YOU</h1>
+        <h1 className="text-5xl text-orange-600 font-mono">
+          THANK YOU, PLEASE CHECK YOUR EMAIL ID
+        </h1>
       )}
     </form>
   );
