@@ -3,7 +3,7 @@ import OverLay from "../overlay";
 export default function Home() {
   return (
     <>
-      <main className="bg-white font-monst text-black md:text-lg w-full h-full flex flex-col justify-center items-center pt-24 pb-12 px-10">
+      <main className="bg-white font-monst text-black md:text-lg w-full h-full flex flex-col justify-center items-center pt-24 pb-12">
         <div className="font-monst md:my-10">
           <div className="text-7xl md:text-9xl font-bold">
             <h1>WE</h1>
@@ -16,9 +16,9 @@ export default function Home() {
           </p>
         </div>
         <br />
-        <p className="text-xs opacity-75">
-          {"{insert video compilation of eva, wall-e, baymax, etc}"}
-        </p>
+        <video className="w-screen" autoPlay loop muted>
+          <source src="/heka.mp4" type="video/mp4" />
+        </video>
         <br />
         <div className="font-monst text-center md:my-10">
           <h1 className="text-3xl font-bold">HOW OUR ROBOTS ARE BEING USED</h1>
@@ -31,7 +31,7 @@ export default function Home() {
             1000+ PARENTS HAPPY THIER CHILD ISN&apos;T PHONE ADDICTED
           </p>
           <p className="text-[0.625rem] md:text-base">
-            100+ PARENTS HAPPY THIER CHILD UNDERSTANDS ROBOTICS
+            1000+ PARENTS HAPPY THIER CHILD UNDERSTANDS ROBOTICS
           </p>
         </div>
         <OverLay currentRoute="/about-us" />
